@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="-80 -80 360 700"
+   version="1.1">
+  <sodipodi:namedview showgrid="true">
+    <inkscape:grid
+       type="xygrid"
+       empspacing="4"
+       spacingx="5"
+       spacingy="5" />
+  </sodipodi:namedview>
+  <rect stroke="black" stroke-width="4" fill="#ffffb4" fill-opacity="0.78431374" x="0" y="-20" width="200" height="620"/>
+    <text id="label" fill="#000000" font-size="24" text-anchor="middle" x="100" y="-20">Label</text>
+  <g>
+    <circle fill="#0000b2" id="pin:Φ0" cx="0" cy="440" r="3"/>
+    <text fill="#808080" font-size="18" x="4" y="446">Φ0</text>
+  </g>
+  <g>
+    <circle fill="#0000b2" id="pin:RDY" cx="0" cy="480" r="3"/>
+    <text fill="#808080" font-size="18" x="4" y="486">RDY</text>
+  </g>
+  <g>
+    <circle fill="#0000b2" id="pin:~NMI" cx="0" cy="520" r="3"/>
+    <text fill="#808080" font-size="18" x="4" y="526">~NMI</text>
+  </g>
+  <g>
+    <circle fill="#0000b2" id="pin:~IRQ" cx="0" cy="540" r="3"/>
+    <text fill="#808080" font-size="18" x="4" y="546">~IRQ</text>
+  </g>
+  <g>
+    <circle fill="#0000b2" id="pin:~RESET" cx="0" cy="560" r="3"/>
+    <text fill="#808080" font-size="18" x="4" y="566">~RESET</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:DA0" cx="200" cy="0" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="6">DA0</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:DA1" cx="200" cy="20" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="26">DA1</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:DA2" cx="200" cy="40" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="46">DA2</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:DA3" cx="200" cy="60" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="66">DA3</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:DA4" cx="200" cy="80" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="86">DA4</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:DA5" cx="200" cy="100" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="106">DA5</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:DA6" cx="200" cy="120" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="126">DA6</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:DA7" cx="200" cy="140" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="146">DA7</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:AB0" cx="200" cy="180" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="186">AB0</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:AB1" cx="200" cy="200" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="206">AB1</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:AB2" cx="200" cy="220" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="226">AB2</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:AB3" cx="200" cy="240" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="246">AB3</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:AB4" cx="200" cy="260" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="266">AB4</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:AB5" cx="200" cy="280" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="286">AB5</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:AB6" cx="200" cy="300" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="306">AB6</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:AB7" cx="200" cy="320" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="326">AB7</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:AB8" cx="200" cy="340" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="346">AB8</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:AB9" cx="200" cy="360" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="366">AB9</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:AB10" cx="200" cy="380" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="386">AB10</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:AB11" cx="200" cy="400" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="406">AB11</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:AB12" cx="200" cy="420" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="426">AB12</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:AB13" cx="200" cy="440" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="446">AB13</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:AB14" cx="200" cy="460" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="466">AB14</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:AB15" cx="200" cy="480" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="486">AB15</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:Φ1" cx="200" cy="520" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="526">Φ1</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:SYNC" cx="200" cy="540" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="546">SYNC</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:R/W" cx="200" cy="560" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="566">R/W</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:Φ2" cx="200" cy="580" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="586">Φ2</text>
+  </g>
+  <g>
+    <circle fill="#0000b2" id="pin:CLK8" cx="100" cy="600" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="middle" x="100" y="594">CLK8</text>
+  </g>
+
+</svg>
