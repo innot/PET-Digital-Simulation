@@ -23,11 +23,11 @@ From Digital open the file `Mainboard.dig`.
 
 The simulation can be started immediately by pressing the ▶ button on the upper toolbar.
 
-The speed of the simulation can be controlled by the 16MHz Clock Component in the DEBUG frame.
+The speed of the simulation can be controlled by the 16MHz clock component in the DEBUG frame.
 ![Clock Element](./docs/images/clock_element.png)
 
 A right click opens a dialog box where the simulated speed can be selected.
-Deselect the `Start real time clock` checkmark to step through the simulation cycle-by-cycle by repeatedly clicking on the clock element.
+Deselect the `Start real time clock` checkmark to step through the simulation cycle-by-cycle by repeatedly clicking on the clock component.
 
 In this mode it is also possible to set breakpoints on signals and run the simulation until a breakpoint is hit.
 
@@ -37,13 +37,13 @@ Further information on how to use the Digital Simulator can be found in its docu
 
 ## Why?
 
-This project was started after watching this [youtube video](https://www.youtube.com/watch?v=nxilekpLp6g) by [curiousmarc](https://www.youtube.com/@CuriousMarc), where he and [Ken Shirriff](https://www.righto.com/) repair a broken PET2001.
+This project was started after watching this [youtube video](https://www.youtube.com/watch?v=nxilekpLp6g) by [curiousmarc](https://www.youtube.com/@CuriousMarc), where he and [Ken Shirriff](https://www.righto.com/2025/04/commodore-pet-repair.html) repair a broken PET2001.
 
 To follow the repairs I looked at the PET schematics - but got the wrong schematics. In the video they repair an original PET with static memory, not the dynamic memory in my schematic.
 
 But as I have always been curious about how dynamic RAM works, especially the refresh part, I decided to simulate the memory part to see how it works.
 
-Once that was running in the simulator I was intrigued by the video circuit. Having started in computing with the VIC20, I had wondered how video was generated before the advent of dedicated video chips.
+Once that was running in the simulator I was intrigued by the video circuit. Having started in computing with the VIC20, I have been fascinated by how video was generated with just logic chips before the advent of dedicated video chips.
 
 After the video circuit was working and generating a valid image the decision was made to just implement the whole system and see if it can boot.
 
