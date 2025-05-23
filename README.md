@@ -8,11 +8,18 @@ It is based on the original schematics which are recreated page by page.
 
 ![overview](./docs/images/full_system_booted.png)
 
+It can be used to analyze and understand how this computer and its components works on a logic level basis. To see how simple (or complex) of a circuit is required to make a fairly simple computer as the PET tick.
+
+It also might help in troubleshooting real PETs by comparing the (hopefully) correct signals of the simulation to signals on the faulty computer.
+
+And it was fun to make.
+
 ## Requirements
 
 To run this simulation the Digital Simulator by Helmut Neemann is required. It can be downloaded [here](https://github.com/hneemann/Digital/releases/latest/download/Digital.zip).
 
 After starting Digital a Plugin containing the simulation code for the 6502 CPU and some other special chips needs to be loaded into Digital.
+
 Go to `Edit`->`Settings`->`Advanced`->`Java Library` and select the "PETComponentsDigitalPlugin.jar" file which is included in the PET Simulator.
 
 After adding the plugin a restart is required.
@@ -23,15 +30,18 @@ From Digital open the file `Mainboard.dig`.
 
 The simulation can be started immediately by pressing the ▶ button on the upper toolbar.
 
-The speed of the simulation can be controlled by the 16MHz clock component in the DEBUG frame.
+Once started, a window for the screen output and a keyboard input box pop up to interact with the system.
+
+Caveat: If you cannot find the Keyboard Input box, it is probably hidden behind the screen output window.
+
+The speed of the simulation is controlled by the 16MHz clock component in the DEBUG frame.
 ![Clock Element](./docs/images/clock_element.png)
 
-A right click opens a dialog box where the simulated speed can be selected.
+A right click opens a dialog box where the simulated speed can be selected. Please note,that this is the (simulated) speed of the nominal 16 MHz quartz crystal of the original PET. The 6502 CPU runs at just 1/16th of this clock (nominal 1MHz).
+
 Deselect the `Start real time clock` checkmark to step through the simulation cycle-by-cycle by repeatedly clicking on the clock component.
 
 In this mode it is also possible to set breakpoints on signals and run the simulation until a breakpoint is hit.
-
-Caveat: If you cannot find the Keyboard Input dialog box, it is probably hidden behind the screen output dialog.
 
 Further information on how to use the Digital Simulator can be found in its documentation (`HELP`->`Documentation`)
 
@@ -39,13 +49,13 @@ Further information on how to use the Digital Simulator can be found in its docu
 
 This project was started after watching this [youtube video](https://www.youtube.com/watch?v=nxilekpLp6g) by [curiousmarc](https://www.youtube.com/@CuriousMarc), where he and [Ken Shirriff](https://www.righto.com/2025/04/commodore-pet-repair.html) repair a broken PET2001.
 
-To follow the repairs I looked at the PET schematics - but got the wrong schematics. In the video they repair an original PET with static memory, not the dynamic memory in my schematic.
+To follow the repairs I looked at the PET schematics - but got the wrong schematics. In the video they repair an original PET with static memory, not the dynamic memory used in my schematic.
 
 But as I have always been curious about how dynamic RAM works, especially the refresh part, I decided to simulate the memory part to see how it works.
 
 Once that was running in the simulator I was intrigued by the video circuit. Having started in computing with the VIC20, I have been fascinated by how video was generated with just logic chips before the advent of dedicated video chips.
 
-After the video circuit was working and generating a valid image the decision was made to just implement the whole system and see if it can boot.
+After the video circuit was working and generating a valid image the decision was made to just implement the whole system and see if it could boot.
 
 Which it can 😊
 
@@ -94,7 +104,7 @@ The simulation has some known bugs:
 
 - About 50% of the time the simulation boots into the TIM monitor program instead of BASIC. The cause of this is unknown and hard to debug as it is non-deterministic (Digital has the "feature" of setting a random initial value for Flip-Flops and Hi-Z outputs)
 
-- Connecting the DO (Data Output) pins of the upper 16k RAM bank to corresponding pins of the lower bank causes spurious short circuits which will stop the simulation. The problem probably lies somewhere within the simulated RAM logic. This is currently fixed by disconnecting the DO pins of the upper bank. This also reduces boot time by about 2 minutes as the Kernal RAM check only takes half as long.
+- Connecting the DO (Data Output) pins of the upper 16k RAM bank to corresponding pins of the lower bank causes spurious short circuits which will stop the simulation. The problem probably lies somewhere within the simulated RAM logic. This is currently fixed by disconnecting the DO pins of the upper bank from the system. On the plus side, this reduces boot time by about 2 minutes as the system RAM check only takes half as long.
 
 - Writing to cassette tape does not work. The CASS WRITE line is constantly high.
 
