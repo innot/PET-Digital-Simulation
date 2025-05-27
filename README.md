@@ -24,6 +24,8 @@ Go to `Edit`->`Settings`->`Advanced`->`Java Library` and select the "PETComponen
 
 After adding the plugin a restart is required.
 
+The source for the [PETComponentsDigitalPlugin](https://github.com/innot/PETComponentsPlugin) as well as the underlying [6502/6520/6522](https://github.com/innot/Sim6502Java) simulations are also on Github.
+
 ## Starting the Simulation
 
 From Digital open the file `Mainboard.dig`.
@@ -61,12 +63,12 @@ Which it can 😊
 
 ## PET Version
 
-This simulation replicates the PET2001N-16, also known as the "dynamic PET". In Europe this version was sold as the CBM3016.
+This simulation replicates the PET2001-32N, also known as the "dynamic PET". In Europe this version was sold as the CBM3032.
 
 This version was chosen because, unlike the original PET, it uses dynamic RAM and, unlike the later 4000 and 8000 Series, the video output is generated only with conventional 74-series logic chips and not with a boring dedicated video controller chip.
 
-This PET version runs BASIC V2.  
-AFAIK the later BASIC versions require the video controller and cannot be used.
+This PET version runs BASIC 2.  
+While it should be possible to use BASIC 4 ROMs, the BASIC 2 has the nice Microsoft Easter Egg and any of the newer BASIC 4 commands (like DLOAD etc.) are of no use in this simulator.
 
 ## Speed
 
@@ -75,7 +77,7 @@ Additionally there are the screen updates which happen multiple times a second.
 
 In other words this simulation is slow and far from running in realtime.
 
-On my development machine (a few years old Core i7-8565U @ 1.80 GHz) the simulation runs at about 120 kHz (120.000 cycles of the 16MHz clock per second) resulting in about 0.75% or 1/133th of the original speed.
+On my development machine (a few years old Core i7-8565U @ 1.80 GHz) the simulation runs at about 200 kHz (200.000 cycles of the 16MHz clock per second) resulting in about 1.25% or 1/80th of the original speed.
 
 So trying to run anything on the simulated PET requires quite a bit of patience. Even getting to the BASIC ready prompt takes about 2 minutes.
 
@@ -102,11 +104,7 @@ And it contains the Microsoft easter egg 😁
 
 The simulation has some known bugs:
 
-- About 50% of the time the simulation boots into the TIM monitor program instead of BASIC. The cause of this is unknown and hard to debug as it is non-deterministic (Digital has the "feature" of setting a random initial value for Flip-Flops and Hi-Z outputs)
-
 - Connecting the DO (Data Output) pins of the upper 16k RAM bank to corresponding pins of the lower bank causes spurious short circuits which will stop the simulation. The problem probably lies somewhere within the simulated RAM logic. This is currently fixed by disconnecting the DO pins of the upper bank from the system. On the plus side, this reduces boot time by about 2 minutes as the system RAM check only takes half as long.
-
-- Writing to cassette tape does not work. The CASS WRITE line is constantly high.
 
 - The IEEE-488 Interface is not implemented. While this could be added reasonably easy, some kind of simulated IEEE-488 device would be required to make the effort worthwhile. And that part is definitely non-trivial.
 
@@ -116,3 +114,10 @@ The simulation has some known bugs:
 - Maybe add a simulated cassette drive to save and load programs.
 - Implement the 4116 RAM chips with a custom component to make them faster and more reliable.
 - Some other interesting systems like the Apple 1
+
+## Conclusion
+
+If you do like this project give it a star or leave a comment on the [discussions](https://github.com/innot/PET-Digital-Simulation/discussions) page.
+If you do find a bug or have an idea for an improvement feel free to raise an [issue](https://github.com/innot/PET-Digital-Simulation/issues).
+And finally you can head over to my blog [start-a-dozen](https://start-a-dozen.com/) where I plan to write some in-detail descriptions of the PET Circuit.
+
