@@ -55,7 +55,7 @@ To follow the repairs I looked at the PET schematics - but got the wrong schemat
 
 But as I have always been curious about how dynamic RAM works, especially the refresh part, I decided to simulate the memory part to see how it works.
 
-Once that was running in the simulator I was intrigued by the video circuit. Having started in computing with the VIC20, I have been fascinated by how video was generated with just logic chips before the advent of dedicated video chips.
+Once that was running in the simulator I was intrigued by the video circuit. Having started with computing in the era of video control chips (VIC20 to be precise), I have been fascinated by how video was generated with just logic chips without any specialized ICs.
 
 After the video circuit was working and generating a valid image the decision was made to just implement the whole system and see if it could boot.
 
@@ -81,7 +81,7 @@ On my development machine (a few years old Core i7-8565U @ 1.80 GHz) the simulat
 
 So trying to run anything on the simulated PET requires quite a bit of patience. Even getting to the BASIC ready prompt takes about 2 minutes.
 
-The speed could be improved a bit by dropping schematics accuracy and replacing components with faster substitutes - e.g. replacing the 16 RAM chips with a single RAM simulation. But the goal of this simulation is not speed but signal accuracy 😊
+The speed could probably be improved a bit by dropping schematics accuracy and replacing components with faster substitutes - e.g. replacing the 16 RAM chips with a single RAM simulation. But the goal of this simulation is schematic accuracy, not speed 😊
 
 ## Compatibility
 
@@ -111,8 +111,8 @@ The simulation has some known bugs:
 ## TODOs
 
 - Fix the Bugs
-- Maybe add a simulated cassette drive to save and load programs.
 - Implement the 4116 RAM chips with a custom component to make them faster and more reliable.
+- Maybe add a simulated cassette drive to save and load programs (but this would be extremly slow)
 - Some other interesting systems like the Apple 1
 
 ## Conclusion
