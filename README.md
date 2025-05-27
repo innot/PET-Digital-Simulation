@@ -4,7 +4,7 @@
 
 This is an (almost) complete logic-level simulation of the Commodore PET Computer using the [Digital](https://github.com/hneemann/Digital) logic circuit simulator.
 
-It is based on the original schematics which are recreated page by page.
+It is based on the [original schematics](https://www.zimmers.net/anonftp/pub/cbm/schematics/computers/pet/2001N/320349.pdf) which are recreated page by page.
 
 ![overview](./docs/images/full_system_booted.png)
 
