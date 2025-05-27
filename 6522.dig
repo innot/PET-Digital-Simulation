@@ -578,7 +578,7 @@
           <string>porta_in</string>
         </entry>
       </elementAttributes>
-      <pos x="1540" y="440"/>
+      <pos x="1580" y="440"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -818,7 +818,7 @@
           <string>portb_in</string>
         </entry>
       </elementAttributes>
-      <pos x="1540" y="840"/>
+      <pos x="1580" y="840"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1118,6 +1118,26 @@
       <elementAttributes/>
       <pos x="460" y="360"/>
     </visualElement>
+    <visualElement>
+      <elementName>PullUp</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>8</int>
+        </entry>
+      </elementAttributes>
+      <pos x="1540" y="400"/>
+    </visualElement>
+    <visualElement>
+      <elementName>PullUp</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>8</int>
+        </entry>
+      </elementAttributes>
+      <pos x="1540" y="800"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
@@ -1227,6 +1247,10 @@
     <wire>
       <p1 x="1500" y="840"/>
       <p2 x="1540" y="840"/>
+    </wire>
+    <wire>
+      <p1 x="1540" y="840"/>
+      <p2 x="1580" y="840"/>
     </wire>
     <wire>
       <p1 x="1300" y="460"/>
@@ -1625,6 +1649,10 @@
       <p2 x="1540" y="440"/>
     </wire>
     <wire>
+      <p1 x="1540" y="440"/>
+      <p2 x="1580" y="440"/>
+    </wire>
+    <wire>
       <p1 x="1120" y="1080"/>
       <p2 x="1160" y="1080"/>
     </wire>
@@ -1699,6 +1727,14 @@
     <wire>
       <p1 x="1220" y="780"/>
       <p2 x="1220" y="880"/>
+    </wire>
+    <wire>
+      <p1 x="1540" y="400"/>
+      <p2 x="1540" y="440"/>
+    </wire>
+    <wire>
+      <p1 x="1540" y="800"/>
+      <p2 x="1540" y="840"/>
     </wire>
     <wire>
       <p1 x="1160" y="380"/>
