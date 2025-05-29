@@ -217,26 +217,6 @@
       <pos x="540" y="260"/>
     </visualElement>
     <visualElement>
-      <elementName>RAMSinglePortSelRnd</elementName>
-      <elementAttributes>
-        <entry>
-          <string>AddrBits</string>
-          <int>10</int>
-        </entry>
-        <entry>
-          <string>Bits</string>
-          <int>4</int>
-        </entry>
-        <entry>
-          <string>inverterConfig</string>
-          <inverterConfig>
-            <string>WE</string>
-          </inverterConfig>
-        </entry>
-      </elementAttributes>
-      <pos x="400" y="220"/>
-    </visualElement>
-    <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
@@ -339,6 +319,26 @@
       <pos x="460" y="680"/>
     </visualElement>
     <visualElement>
+      <elementName>RAMSinglePortSel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>AddrBits</string>
+          <int>10</int>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>4</int>
+        </entry>
+        <entry>
+          <string>inverterConfig</string>
+          <inverterConfig>
+            <string>WE</string>
+          </inverterConfig>
+        </entry>
+      </elementAttributes>
+      <pos x="400" y="220"/>
+    </visualElement>
+    <visualElement>
       <elementName>D_FF</elementName>
       <elementAttributes>
         <entry>
@@ -403,7 +403,7 @@
       <p2 x="400" y="240"/>
     </wire>
     <wire>
-      <p1 x="120" y="240"/>
+      <p1 x="140" y="240"/>
       <p2 x="160" y="240"/>
     </wire>
     <wire>
@@ -419,7 +419,7 @@
       <p2 x="40" y="500"/>
     </wire>
     <wire>
-      <p1 x="120" y="500"/>
+      <p1 x="140" y="500"/>
       <p2 x="340" y="500"/>
     </wire>
     <wire>
@@ -491,10 +491,6 @@
       <p2 x="360" y="680"/>
     </wire>
     <wire>
-      <p1 x="120" y="240"/>
-      <p2 x="120" y="500"/>
-    </wire>
-    <wire>
       <p1 x="300" y="640"/>
       <p2 x="300" y="680"/>
     </wire>
@@ -513,6 +509,10 @@
     <wire>
       <p1 x="460" y="500"/>
       <p2 x="460" y="680"/>
+    </wire>
+    <wire>
+      <p1 x="140" y="240"/>
+      <p2 x="140" y="500"/>
     </wire>
   </wires>
   <measurementOrdering/>
