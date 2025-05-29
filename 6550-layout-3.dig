@@ -221,30 +221,6 @@
       <pos x="620" y="740"/>
     </visualElement>
     <visualElement>
-      <elementName>RAMSinglePortSel</elementName>
-      <elementAttributes>
-        <entry>
-          <string>AddrBits</string>
-          <int>10</int>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="1"/>
-        </entry>
-        <entry>
-          <string>Bits</string>
-          <int>4</int>
-        </entry>
-        <entry>
-          <string>inverterConfig</string>
-          <inverterConfig>
-            <string>WE</string>
-          </inverterConfig>
-        </entry>
-      </elementAttributes>
-      <pos x="200" y="340"/>
-    </visualElement>
-    <visualElement>
       <elementName>D_FF</elementName>
       <elementAttributes>
         <entry>
@@ -275,6 +251,34 @@
         </entry>
       </elementAttributes>
       <pos x="200" y="740"/>
+    </visualElement>
+    <visualElement>
+      <elementName>RAMSinglePortSelRnd</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>1Kx4 RAM</string>
+        </entry>
+        <entry>
+          <string>AddrBits</string>
+          <int>10</int>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>4</int>
+        </entry>
+        <entry>
+          <string>inverterConfig</string>
+          <inverterConfig>
+            <string>WE</string>
+          </inverterConfig>
+        </entry>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+      </elementAttributes>
+      <pos x="200" y="340"/>
     </visualElement>
   </visualElements>
   <wires>

@@ -96,11 +96,6 @@
       <pos x="340" y="440"/>
     </visualElement>
     <visualElement>
-      <elementName>Or</elementName>
-      <elementAttributes/>
-      <pos x="220" y="200"/>
-    </visualElement>
-    <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
@@ -524,6 +519,11 @@
       </elementAttributes>
       <pos x="1420" y="600"/>
     </visualElement>
+    <visualElement>
+      <elementName>NOr</elementName>
+      <elementAttributes/>
+      <pos x="220" y="200"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
@@ -591,12 +591,12 @@
       <p2 x="540" y="480"/>
     </wire>
     <wire>
-      <p1 x="240" y="640"/>
-      <p2 x="260" y="640"/>
-    </wire>
-    <wire>
       <p1 x="160" y="640"/>
       <p2 x="200" y="640"/>
+    </wire>
+    <wire>
+      <p1 x="240" y="640"/>
+      <p2 x="260" y="640"/>
     </wire>
     <wire>
       <p1 x="1260" y="640"/>
@@ -807,7 +807,7 @@
       <p2 x="1460" y="460"/>
     </wire>
     <wire>
-      <p1 x="280" y="220"/>
+      <p1 x="300" y="220"/>
       <p2 x="340" y="220"/>
     </wire>
     <wire>

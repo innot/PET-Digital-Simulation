@@ -319,8 +319,22 @@
       <pos x="460" y="680"/>
     </visualElement>
     <visualElement>
-      <elementName>RAMSinglePortSel</elementName>
+      <elementName>D_FF</elementName>
       <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>10</int>
+        </entry>
+      </elementAttributes>
+      <pos x="160" y="220"/>
+    </visualElement>
+    <visualElement>
+      <elementName>RAMSinglePortSelRnd</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>1Kx4 RAM</string>
+        </entry>
         <entry>
           <string>AddrBits</string>
           <int>10</int>
@@ -337,16 +351,6 @@
         </entry>
       </elementAttributes>
       <pos x="400" y="220"/>
-    </visualElement>
-    <visualElement>
-      <elementName>D_FF</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Bits</string>
-          <int>10</int>
-        </entry>
-      </elementAttributes>
-      <pos x="160" y="220"/>
     </visualElement>
   </visualElements>
   <wires>
