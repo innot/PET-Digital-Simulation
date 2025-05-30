@@ -255,6 +255,11 @@ Source: https://www.c64-wiki.com/wiki/PET_2001#Diagnostic_plugs</string>
       </elementAttributes>
       <pos x="220" y="180"/>
     </visualElement>
+    <visualElement>
+      <elementName>PullDown</elementName>
+      <elementAttributes/>
+      <pos x="420" y="240"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
@@ -335,6 +340,10 @@ Source: https://www.c64-wiki.com/wiki/PET_2001#Diagnostic_plugs</string>
     </wire>
     <wire>
       <p1 x="220" y="220"/>
+      <p2 x="420" y="220"/>
+    </wire>
+    <wire>
+      <p1 x="420" y="220"/>
       <p2 x="460" y="220"/>
     </wire>
     <wire>
@@ -360,6 +369,10 @@ Source: https://www.c64-wiki.com/wiki/PET_2001#Diagnostic_plugs</string>
     <wire>
       <p1 x="260" y="680"/>
       <p2 x="260" y="720"/>
+    </wire>
+    <wire>
+      <p1 x="420" y="220"/>
+      <p2 x="420" y="240"/>
     </wire>
     <wire>
       <p1 x="520" y="180"/>
