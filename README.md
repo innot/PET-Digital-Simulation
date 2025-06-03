@@ -66,7 +66,7 @@ After the video circuit was working and generating a valid image the decision wa
 
 Which it can 😊
 
-After the first version with the dynamic PET simulation was released I got a request to simulate the original PET as well. With the CPU, PIA and VIA components already finished it was not to much effort to do the dynamic PET as well.
+After the first version with the dynamic PET simulation was released I got a request to simulate the original PET as well. With the CPU, PIA and VIA components already finished it was not to much effort to do the original PET as well.
 
 ## PET Versions
 
@@ -96,13 +96,13 @@ Additionally there are the screen updates which happen multiple times a second.
 
 In other words this simulation is slow and far from running in realtime.
 
-On my development machine (a few years old Core i7-8565U @ 1.80 GHz) the simulation runs at about 200 kHz (200.000 cycles of the 16MHz clock per second) resulting in about 1.25% or 1/80th of the original speed.
+On my development machine (a 2019 vintage Core i7-8565U @ 1.80 GHz) the simulation runs at about 200 kHz (200.000 cycles of the 16MHz clock per second) resulting in about 1.25% or 1/80th of the original speed.
 
 So trying to run anything on the simulated PET requires quite a bit of patience. Even getting to the BASIC ready prompt takes about 2 minutes.
 
 The speed could probably be improved a bit by dropping schematics accuracy and replacing components with faster substitutes - e.g. replacing the 16 RAM chips with a single RAM simulation. But the goal of this simulation is schematic accuracy, not speed 😊
 
-The PET2001 simulation runs faster because it only has to simulate 8 system clock cycles for every CPU clock cycle. ALso with fewer RAM to check the system gets much faster to the BASIC ready prompt.
+The PET2001 simulation runs faster because it only has to simulate 8 system clock cycles for every CPU clock cycle. Also with fewer RAM to check the system gets much faster to the BASIC ready prompt.
 
 ## Compatibility
 
@@ -136,7 +136,7 @@ Which are very visible during the boot when clearing the screen memory
 Also the included BASIC V1 has the "PEEK Protection" of the BASIC ROMs
 ![PEEK Protection](./docs/images/basic1_no_peek.png)
 
-But the Diagnostic ROM fails, showing a BAD VIDEO message on the VIDEO TEST.
+But the Diagnostic ROM also fails, showing a BAD VIDEO message on the VIDEO TEST.
 
 ## Bugs
 
