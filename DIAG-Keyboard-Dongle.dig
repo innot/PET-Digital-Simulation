@@ -290,16 +290,88 @@ https://www.c64-wiki.com/wiki/PET_2001#Diagnostic_plugs</string>
       </elementAttributes>
       <pos x="600" y="20"/>
     </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="300" y="480"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="300" y="520"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="300" y="560"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="300" y="600"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="300" y="640"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="300" y="680"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="300" y="720"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="300" y="760"/>
+    </visualElement>
   </visualElements>
   <wires>
-    <wire>
-      <p1 x="240" y="480"/>
-      <p2 x="320" y="480"/>
-    </wire>
-    <wire>
-      <p1 x="240" y="640"/>
-      <p2 x="560" y="640"/>
-    </wire>
     <wire>
       <p1 x="240" y="0"/>
       <p2 x="340" y="0"/>
@@ -313,8 +385,20 @@ https://www.c64-wiki.com/wiki/PET_2001#Diagnostic_plugs</string>
       <p2 x="300" y="320"/>
     </wire>
     <wire>
-      <p1 x="240" y="680"/>
-      <p2 x="600" y="680"/>
+      <p1 x="240" y="480"/>
+      <p2 x="260" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="300" y="480"/>
+      <p2 x="320" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="240" y="640"/>
+      <p2 x="260" y="640"/>
+    </wire>
+    <wire>
+      <p1 x="300" y="640"/>
+      <p2 x="560" y="640"/>
     </wire>
     <wire>
       <p1 x="240" y="200"/>
@@ -330,15 +414,19 @@ https://www.c64-wiki.com/wiki/PET_2001#Diagnostic_plugs</string>
     </wire>
     <wire>
       <p1 x="240" y="520"/>
+      <p2 x="260" y="520"/>
+    </wire>
+    <wire>
+      <p1 x="300" y="520"/>
       <p2 x="420" y="520"/>
     </wire>
     <wire>
-      <p1 x="240" y="560"/>
-      <p2 x="480" y="560"/>
+      <p1 x="240" y="680"/>
+      <p2 x="260" y="680"/>
     </wire>
     <wire>
-      <p1 x="240" y="720"/>
-      <p2 x="640" y="720"/>
+      <p1 x="300" y="680"/>
+      <p2 x="600" y="680"/>
     </wire>
     <wire>
       <p1 x="240" y="80"/>
@@ -347,6 +435,22 @@ https://www.c64-wiki.com/wiki/PET_2001#Diagnostic_plugs</string>
     <wire>
       <p1 x="240" y="240"/>
       <p2 x="640" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="240" y="560"/>
+      <p2 x="260" y="560"/>
+    </wire>
+    <wire>
+      <p1 x="300" y="560"/>
+      <p2 x="480" y="560"/>
+    </wire>
+    <wire>
+      <p1 x="240" y="720"/>
+      <p2 x="260" y="720"/>
+    </wire>
+    <wire>
+      <p1 x="300" y="720"/>
+      <p2 x="640" y="720"/>
     </wire>
     <wire>
       <p1 x="240" y="120"/>
@@ -358,10 +462,18 @@ https://www.c64-wiki.com/wiki/PET_2001#Diagnostic_plugs</string>
     </wire>
     <wire>
       <p1 x="240" y="600"/>
+      <p2 x="260" y="600"/>
+    </wire>
+    <wire>
+      <p1 x="300" y="600"/>
       <p2 x="520" y="600"/>
     </wire>
     <wire>
       <p1 x="240" y="760"/>
+      <p2 x="260" y="760"/>
+    </wire>
+    <wire>
+      <p1 x="300" y="760"/>
       <p2 x="680" y="760"/>
     </wire>
     <wire>
