@@ -6,11 +6,15 @@ This is an (almost) complete logic-level simulation of the Commodore PET Compute
 
 It is based on the [original schematics](https://www.zimmers.net/anonftp/pub/cbm/schematics/computers/pet/2001N/320349.pdf) which are recreated page by page.
 
-![overview](./docs/images/full_system_booted.png)
+![Dynamic PET](./docs/images/full_system_booted.png)
+*PET2001-32N/CBM3032 Schematic*
 
-It can be used to analyze and understand how this computer and its components works on a logic level basis. To see how simple (or complex) of a circuit is required to make a fairly simple computer as the PET tick.
+![Original PET](./docs/images/2001_full_system_booted.png)
+*PET2001-4 Schematic*
 
-It also might help in troubleshooting real PETs by comparing the (hopefully) correct signals of the simulation to signals on the faulty computer.
+It can be used to analyze and understand how this computer and its components works down to single logic elements, and to see how simple (or complex) of a circuit is required to make a fairly simple computer as the PET tick.
+
+It might also help in troubleshooting real PETs by comparing the (hopefully) correct signals of the simulation to signals on the faulty computer.
 
 And it was fun to make.
 
@@ -28,7 +32,8 @@ The source for the [PETComponentsDigitalPlugin](https://github.com/innot/PETComp
 
 ## Starting the Simulation
 
-From Digital open the file `Mainboard.dig`.
+From Digital open the file `Mainboard-CBM3032.dig` to start the dynamic PET simulation.
+Or `Mainboard-PET2001-4.dig` for the original PET simulation.
 
 The simulation can be started immediately by pressing the ▶ button on the upper toolbar.
 
@@ -36,10 +41,10 @@ Once started, a window for the screen output and a keyboard input box pop up to 
 
 Caveat: If you cannot find the Keyboard Input box, it is probably hidden behind the screen output window.
 
-The speed of the simulation is controlled by the 16MHz clock component in the DEBUG frame.
+The speed of the simulation is controlled by the 16MHz (PET2001N/CBM3032) resp. 8MHz (PET2001-4) clock component in the DEBUG frame.
 ![Clock Element](./docs/images/clock_element.png)
 
-A right click opens a dialog box where the simulated speed can be selected. Please note,that this is the (simulated) speed of the nominal 16 MHz quartz crystal of the original PET. The 6502 CPU runs at just 1/16th of this clock (nominal 1MHz).
+A right click opens a dialog box where the simulated speed can be selected. Please note,that this is the (simulated) speed of the nominal 16MHz/8MHz quartz crystal of the original PET. The 6502 CPU runs at just 1/16th or 1/8th of this clock (nominal 1MHz).
 
 Deselect the `Start real time clock` checkmark to step through the simulation cycle-by-cycle by repeatedly clicking on the clock component.
 
@@ -61,18 +66,32 @@ After the video circuit was working and generating a valid image the decision wa
 
 Which it can 😊
 
-## PET Version
+After the first version with the dynamic PET simulation was released I got a request to simulate the original PET as well. With the CPU, PIA and VIA components already finished it was not to much effort to do the dynamic PET as well.
 
-This simulation replicates the PET2001-32N, also known as the "dynamic PET". In Europe this version was sold as the CBM3032.
+## PET Versions
 
-This version was chosen because, unlike the original PET, it uses dynamic RAM and, unlike the later 4000 and 8000 Series, the video output is generated only with conventional 74-series logic chips and not with a boring dedicated video controller chip.
+This project contains two PET versions:
+
+### PET2001N-32/CBM3032
+
+also known as the "dynamic PET". In Europe this version was sold as the CBM3032.
+
+This version was chosen because it uses dynamic RAM and, unlike the later 4000 and 8000 Series, the video output is generated only with conventional 74-series logic chips and not with a boring dedicated video controller chip.
 
 This PET version runs BASIC 2.  
 While it should be possible to use BASIC 4 ROMs, the BASIC 2 has the nice Microsoft Easter Egg and any of the newer BASIC 4 commands (like DLOAD etc.) are of no use in this simulator.
 
+### The PET2001-4
+
+also known as the "original PET" (with the chiclet Keyboard)
+
+This version was added to the simulation because it is often the target of restoration projects. It is simpler in design (though with horrible schematics) and due to the 8MHz clock the simulation runs twice as fast.
+
+It has BASIC 1 with all its quirks and bugs.
+
 ## Speed
 
-This simulation currently has about 570 logic elements, whose state needs to be calculated multiple times for every change of the main clock signal (a 16 MHz clock) as the signals propagate through them.
+This PET2001N/CBM3032 simulation has currently about 580 logic elements, whose state needs to be calculated multiple times for every change of the main clock signal (a 16 MHz clock) as the signals propagate through them.
 Additionally there are the screen updates which happen multiple times a second.
 
 In other words this simulation is slow and far from running in realtime.
@@ -83,9 +102,13 @@ So trying to run anything on the simulated PET requires quite a bit of patience.
 
 The speed could probably be improved a bit by dropping schematics accuracy and replacing components with faster substitutes - e.g. replacing the 16 RAM chips with a single RAM simulation. But the goal of this simulation is schematic accuracy, not speed 😊
 
+The PET2001 simulation runs faster because it only has to simulate 8 system clock cycles for every CPU clock cycle. ALso with fewer RAM to check the system gets much faster to the BASIC ready prompt.
+
 ## Compatibility
 
-The simulated system is fairly compatible with the real PET.
+The simulated systems are fairly compatible with their real counterparts.
+
+### PET2001N / CBM3032
 
 It can run the TIM (Terminal Interface Monitor) by executing
 > SYS1024
@@ -100,18 +123,37 @@ It can change to lowercase letters with
 And it contains the Microsoft easter egg 😁
 ![Microsoft Easter Egg](./docs/images/microsoft_easter_egg.png)
 
+But it runs only part of the official Commodore Diagnostic Software and has a bug generating the correct 60Hz IRQ signal.
+![Diagnostic Fail](./docs/images/2001N_diagnostic_fail.png)
+
+### Original PET2001
+
+The simulation of the original PET is also fairly accurate. It even shows the video sparkles when the CPU accesses the screen RAM
+![2001_display_sparkles](./docs/images/2001_display_sparkles.png)
+Which are very visible during the boot when clearing the screen memory
+![2001_boot_sparkles](./docs/images/2001_boot_sparkles.png)
+
+Also the included BASIC V1 has the "PEEK Protection" of the BASIC ROMs
+![PEEK Protection](./docs/images/basic1_no_peek.png)
+
+But the Diagnostic ROM fails, showing a BAD VIDEO message on the VIDEO TEST.
+
 ## Bugs
 
 The simulation has some known bugs:
 
-- Connecting the DO (Data Output) pins of the upper 16k RAM bank to corresponding pins of the lower bank causes spurious short circuits which will stop the simulation. The problem probably lies somewhere within the simulated RAM logic. This is currently fixed by disconnecting the DO pins of the upper bank from the system. On the plus side, this reduces boot time by about 2 minutes as the system RAM check only takes half as long.
+- PET2001N/CBM3032: Connecting the DO (Data Output) pins of the upper 16k RAM bank to corresponding pins of the lower bank causes spurious short circuits which will stop the simulation. The problem probably lies somewhere within the simulated RAM logic. This is currently fixed by disconnecting the DO pins of the upper bank from the system. On the plus side, this reduces boot time by about 2 minutes as the system RAM check only takes half as long.
 
 - The IEEE-488 Interface is not implemented. While this could be added reasonably easy, some kind of simulated IEEE-488 device would be required to make the effort worthwhile. And that part is definitely non-trivial.
+
+- PET2001N/CBM3032:The Diagnostic ROM fails when testing the 60Hz IRQ, even though the IRQ signal is present.
+
+- PET2001: The Diagnostic ROM fails during the VIDEO TEST.
 
 ## TODOs
 
 - Fix the Bugs
-- Implement the 4116 RAM chips with a custom component to make them faster and more reliable.
+- PET2001N/CBM3032: Implement the 4116 RAM chips with a custom component to make them faster and more reliable.
 - Maybe add a simulated cassette drive to save and load programs (but this would be extremly slow)
 - Some other interesting systems like the Apple 1
 

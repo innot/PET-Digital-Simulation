@@ -19,6 +19,10 @@
   <rect stroke="black" stroke-width="4" fill="#ffffb4" fill-opacity="0.78431374" x="0" y="-20" width="200" height="620"/>
     <text id="label" fill="#000000" font-size="24" text-anchor="middle" x="100" y="-20">Label</text>
   <g>
+    <circle fill="#0000b2" id="pin:S.O." cx="0" cy="400" r="3"/>
+    <text fill="#808080" font-size="18" x="4" y="406">S.O.</text>
+  </g>
+  <g>
     <circle fill="#0000b2" id="pin:Φ0" cx="0" cy="440" r="3"/>
     <text fill="#808080" font-size="18" x="4" y="446">Φ0</text>
   </g>
@@ -135,6 +139,10 @@
     <text fill="#808080" font-size="18" text-anchor="end" x="196" y="486">AB15</text>
   </g>
   <g>
+    <circle fill="#b20000" id="pin:N.C." cx="200" cy="500" r="3"/>
+    <text fill="#808080" font-size="18" text-anchor="end" x="196" y="506">N.C.</text>
+  </g>
+  <g>
     <circle fill="#b20000" id="pin:Φ1" cx="200" cy="520" r="3"/>
     <text fill="#808080" font-size="18" text-anchor="end" x="196" y="526">Φ1</text>
   </g>
@@ -149,10 +157,6 @@
   <g>
     <circle fill="#b20000" id="pin:Φ2" cx="200" cy="580" r="3"/>
     <text fill="#808080" font-size="18" text-anchor="end" x="196" y="586">Φ2</text>
-  </g>
-  <g>
-    <circle fill="#0000b2" id="pin:CLK8" cx="100" cy="600" r="3"/>
-    <text fill="#808080" font-size="18" text-anchor="middle" x="100" y="594">CLK8</text>
   </g>
 
 </svg>

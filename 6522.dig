@@ -1138,6 +1138,26 @@
       </elementAttributes>
       <pos x="1540" y="800"/>
     </visualElement>
+    <visualElement>
+      <elementName>PullUp</elementName>
+      <elementAttributes/>
+      <pos x="1300" y="220"/>
+    </visualElement>
+    <visualElement>
+      <elementName>PullUp</elementName>
+      <elementAttributes/>
+      <pos x="1300" y="1180"/>
+    </visualElement>
+    <visualElement>
+      <elementName>PullUp</elementName>
+      <elementAttributes/>
+      <pos x="1320" y="220"/>
+    </visualElement>
+    <visualElement>
+      <elementName>PullUp</elementName>
+      <elementAttributes/>
+      <pos x="1320" y="1180"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
@@ -1350,6 +1370,10 @@
     </wire>
     <wire>
       <p1 x="1280" y="280"/>
+      <p2 x="1320" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="1320" y="280"/>
       <p2 x="1360" y="280"/>
     </wire>
     <wire>
@@ -1378,6 +1402,10 @@
     </wire>
     <wire>
       <p1 x="1280" y="1240"/>
+      <p2 x="1320" y="1240"/>
+    </wire>
+    <wire>
+      <p1 x="1320" y="1240"/>
       <p2 x="1360" y="1240"/>
     </wire>
     <wire>
@@ -1594,10 +1622,18 @@
     </wire>
     <wire>
       <p1 x="1280" y="240"/>
+      <p2 x="1300" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="1300" y="240"/>
       <p2 x="1360" y="240"/>
     </wire>
     <wire>
       <p1 x="1280" y="1200"/>
+      <p2 x="1300" y="1200"/>
+    </wire>
+    <wire>
+      <p1 x="1300" y="1200"/>
       <p2 x="1360" y="1200"/>
     </wire>
     <wire>
@@ -1745,6 +1781,14 @@
       <p2 x="1160" y="1000"/>
     </wire>
     <wire>
+      <p1 x="1320" y="220"/>
+      <p2 x="1320" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="1320" y="1180"/>
+      <p2 x="1320" y="1240"/>
+    </wire>
+    <wire>
       <p1 x="1260" y="380"/>
       <p2 x="1260" y="400"/>
     </wire>
@@ -1795,6 +1839,14 @@
     <wire>
       <p1 x="340" y="620"/>
       <p2 x="340" y="960"/>
+    </wire>
+    <wire>
+      <p1 x="1300" y="220"/>
+      <p2 x="1300" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="1300" y="1180"/>
+      <p2 x="1300" y="1200"/>
     </wire>
     <wire>
       <p1 x="1240" y="380"/>
