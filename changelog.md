@@ -6,13 +6,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 -->
 
-## [unreleased]
+## [Release 3]
 
 ### Added
 
 - Simulation of an original PET2001
 
-- Diagnostic dongles for the user port and keyboard to be used with a diagnostic ROM.
+- Diagnostic dongles for the user port and keyboard to be used with the Diagnostic ROM/Clip.
+
+- Simulation of the Commodore Diagnostic Clip (6502-DIAG-Clip.dig)
 
 - User port connector
 
@@ -20,21 +22,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - There are now two mainboard files:
   - Mainboard-CBM3032.dig
-  - Mainboard-PET2001-8k.dig
+  - Mainboard-PET2001-4.dig
 
   for the two simulated systems.
 
-- Monitor.dig has been changed to
+- Monitor.dig changed to
   - CRT-green.dig and
   - CRT-white.dig
 
-### Deprecated
+- `PETComponentsDigitalPlugin.jar` upgraded to 1.0.1 (fixed errors in 6520 and 6522 simulations)
 
-### Removed
+- README.md updated
 
 ### Fixed
 
 - 74LS165 circuit [issue](https://github.com/hneemann/Digital/issues/1434).
+
+- Mainboard-CBM3032.dig: "Write Protect" ROM to prevent simulation crash when writing to ROM (e.g by CBM Diagnostic ROM)
 
 ## [Release 2] - 2025-05-27
 
@@ -49,8 +53,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - A new PETComponentsDigitalPlugin.jar is included, which fixes errors in the 6522 Timer to make the cassette tape write work.
 
 ## [Release 1] - 2025-05-23
-
-### Added
 
 First release.
 
